@@ -3,11 +3,12 @@ using System.Net.Http.Json;
 using System.Text.Json;
 
 var httpClient = new HttpClient { BaseAddress = new Uri("https://localhost:7080") };
-var filePath = "events.jsonl";
+string fileName = "events.jsonl";
+string path = Path.Combine(Environment.CurrentDirectory, fileName);
 
 string currentStudentId = "";
 
-using var reader = new StreamReader(filePath);
+using var reader = new StreamReader(path);
 string? line;
 
 Console.WriteLine("Starter import...");
