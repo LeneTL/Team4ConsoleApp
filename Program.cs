@@ -2,7 +2,7 @@
 using System.Net.Http.Json;
 using System.Text.Json;
 
-var httpClient = new HttpClient { BaseAddress = new Uri("http://localhost:5000") };
+var httpClient = new HttpClient { BaseAddress = new Uri("http://localhost:7080") };
 var filePath = "events.jsonl";
 
 string currentStudentId = "";
